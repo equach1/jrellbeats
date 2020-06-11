@@ -1,0 +1,131 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jacob Waldrip</title>
+    <meta name="description" content="Personal Landing Page">
+    <meta name="author" content="Jacob Waldrip">
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- FONT –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    
+    <!---- ICONS -->
+    <link rel="shortcut icon" href="{% static 'images/favicon2.ico' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png' %}">
+
+    <!-- CSS -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+    <!-- JAVASCRIPT-->
+    <!-- Modernizr -->
+    <script src="{% static 'js/modernizr.js' %}"></script> 
+
+
+</head>
+<body id="page-top" class="politics_version">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="main-ld">
+			<div id="loader"></div>  
+		</div>
+    </div>
+    <!-- End Preloader-->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div style="margin: 0 auto;">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fa fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ml-auto">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger active" href="#home">|  Home  |</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link js-scroll-trigger" href="#landingpage"> Landing Page </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#about">| About Me |</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#skills">|  Skills  |</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#personalcontent">Content</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/jakesboy2" target="_blank">|  Github  |</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/home/screeps">  Screeps  |</a>
+              </li
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<!-- Content that child html files supply-->
+{% block content %}
+{% endblock %}
+
+<!-- Footer -->
+<div class="copyrights">
+    <div class="container">
+        <div class="footer-distributed">
+            <div class="footer-left">
+                <p class="footer-links">
+        <a href="#">Home</a>
+        <a href="#landingpage">Landing Page</a>
+        <a href="#about">About Me</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#personalcontent">Content</a>
+                <a href="https://github.com/jakesboy2" target="_blank">Github</a>
+                </p>
+                <p class="footer-company-name">All Rights Reserved. &copy; 2020 <a href="#">Jacob Waldrip</a>
+            </div>
+        </div>
+    </div><!-- end container -->
+</div><!-- end copyrights -->
+
+<!-- Scroll To Top Sticky Button -->
+<a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a> 
+
+<!-- Email JS module -->
+<script src="{% static 'js/email.js' %}"></script>
+
+<!-- ALL JS FILES -->
+<script src="{% static 'js/all.js' %}"></script>
+<script src="{% static 'js/kris-facts.js' %}"></script>
+<!-- Camera Slider -->
+<script src="{% static 'js/jquery.easing.1.3.js' %}"></script> 
+<script src="{% static 'js/parallaxie.js' %}"></script>
+<script src="{% static 'js/headline.js' %}"></script>
+<!-- Contact form JavaScript -->
+<script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+<script src="{% static 'js/contact_me.js' %}"></script>
+<!-- ALL PLUGINS -->
+<script src="{% static 'js/custom.js' %}"></script>
+<script src="{% static 'js/jquery.vide.js' %}"></script>
+
+</body>
+</html>

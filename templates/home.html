@@ -1,0 +1,444 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+   	<section id="home" class="main-banner parallaxie" style="background: url('{% static 'uploads/main-banner.jpg' %}')">
+		<div class="heading">
+			<h1>&ltJacob.Waldrip&gt</h1>
+			<p>"Don't expect to be motivated every day to make things happen.<br>You won't be. Don’t count on motivation. Count on discipline."</p>
+			<h3 class="cd-headline clip is-full-width">
+				<span>I AM A </span>
+				<span class="cd-words-wrapper">
+					<b class="is-visible">Web Developer</b>
+					<b>PHP Developer</b>
+					<b>Typescript Developer</b>
+					<b>Javascript Developer</b>
+					<b>Java Developer</b>
+					<b>Spring Developer</b>
+					<b>Python Developer</b>
+					<b>Django Developer</b>
+					<b>SQL Developer</b>
+					<b>Backend Developer</b>
+					<b>Full Stack Developer</b>
+				</span>
+			</h3>
+		</div>
+	</section>
+
+	<!-- Pretty clouds between landing page and home banner -->
+	<svg id="clouds" class="hidden-xs" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 85 100" preserveAspectRatio="none">
+        <path d="M-5 100 Q 0 20 5 100 Z
+            M0 100 Q 5 0 10 100
+            M5 100 Q 10 30 15 100
+            M10 100 Q 15 10 20 100
+            M15 100 Q 20 30 25 100
+            M20 100 Q 25 -10 30 100
+            M25 100 Q 30 10 35 100
+            M30 100 Q 35 30 40 100
+            M35 100 Q 40 10 45 100
+            M40 100 Q 45 50 50 100
+            M45 100 Q 50 20 55 100
+            M50 100 Q 55 40 60 100
+            M55 100 Q 60 60 65 100
+            M60 100 Q 65 50 70 100
+            M65 100 Q 70 20 75 100
+            M70 100 Q 75 45 80 100
+            M75 100 Q 80 30 85 100
+            M80 100 Q 85 20 90 100
+            M85 100 Q 90 50 95 100
+            M90 100 Q 95 25 100 100
+            M95 100 Q 100 15 105 100 Z">
+        </path>
+    </svg>
+
+	<!-- Landing Page Section -->
+	<div id="landingpage" class="section lb">
+		<div class="container">
+			<div class="section-title text-left">
+                <h3>Landing Page</h3>
+                <p>Need a place to go? Welcome aboard, we'll get you where you're going.</p>
+            </div><!-- end title -->
+			
+			<div class="gallery-menu row">
+				<div class="col-md-12">
+					<div class="button-group filter-button-group text-left">
+						<button class="active" data-filter="*">All</button>
+						<button data-filter=".gal_dev">Development</button>
+						<button data-filter=".gal_learn">Learning</button>
+						<button data-filter=".gal_ent">Entertainment</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="gallery-list row">
+				<!-- Youtube-->
+				<div class="col-md-4 col-sm-6 gallery-grid gal_ent gal_learn gal_dev">
+					<div class="gallery-single fix">
+						<a title="Youtube" href="https://youtube.com"><img src="{% static 'uploads/youtube.png' %}" class="img-fluid" alt="Image"></a>
+					</div>
+				</div>
+
+				<!-- Reddit -->
+				<div class="col-md-4 col-sm-6 gallery-grid gal_ent">
+					<div class="gallery-single fix">
+						<a title="Reddit" href="https://reddit.com"><img src="{% static 'uploads/reddit.png' %}" class="img-fluid" alt="Image"></a>
+					</div>
+				</div>
+
+				<!-- Github -->
+				<div class="col-md-4 col-sm-6 gallery-grid gal_dev">
+					<div class="gallery-single fix">
+						<a title="Github - Jakesboy2" href="https://github.com/jakesboy2"><img src="{% static 'uploads/Github.png' %}" class="img-fluid" alt="Image"></a>
+					</div>
+				</div>
+
+				<!-- Steam -->
+				<div class="col-md-4 col-sm-6 gallery-grid gal_ent">
+					<div class="gallery-single fix">
+						<a title="Steam" href="https://steam.com"><img src="{% static 'uploads/steam.png' %}" class="img-fluid" alt="Image"></a>
+					</div>
+				</div>
+
+				<!-- Slack -->
+				<div class="col-md-4 col-sm-6 gallery-grid gal_learn gal_dev">
+					<div class="gallery-single fix">
+						<a title="Screeps Slack" href="https://screeps.slack.com"><img src="{% static 'uploads/slack.png' %}" class="img-fluid" alt="Image"></a>
+					</div>
+				</div>
+
+				<!-- Discord -->
+				<div class="col-md-4 col-sm-6 gallery-grid gal_learn">
+					<div class="gallery-single fix">
+						<a title="Discord" href="https://discord.com"><img src="{% static 'uploads/discord.png' %}" class="img-fluid" alt="Image"></a>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- About Me Section -->
+    <div id="about" class="section wb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="message-box">                        
+                        <h2>About Jacob.</h2>
+                        <p>&nbsp&nbspI am a {{ age }} year old developer from Oklahoma City, born and raised. I spend my time watching sports (Go Cowboys!), and I'm always thinking of a new project to dive into whether its woodworking, programming, or tinkering with electronics and hardware. When I'm not knee deep in my latest project, I'm listening to and making music or spending time with my family, friends, and lovely fiancé. </p>
+						<p>&nbsp&nbspI have a passion for computers, software and hardware, stemming back from a young age. I have gone through my early years knowing this is the path my career and talents would lead me. I will graduate with my Bachelors in Computer Science from the University of Central Oklahoma in the spring semester of 2020. I plan to have a long and fuffilling career in software development and remain absolutely estatic everyday to hone my skills and improve myself. </p>
+
+                        <a href="{% static 'uploads/resume.pdf' %}" class="sim-btn btn-hover-new" data-text="Download" download onclick="emailOnDownload(); return true;"><span>Download Resumé</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+
+                <div class="col-md-6">
+                    <div class="right-box-pro wow fadeIn">
+                        <img src="{% static 'uploads/jakenape.jpg' %}" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+	
+
+	<!-- Professional Experience / Projects Section -->
+    <div id="experience" class="section lb">
+        <div class="container">
+            <div class="section-title text-left">
+                <h3>Professional Experience</h3>
+                <p>The more you read, the more you'll know. The more you learn, the more places you'll go.</p>
+            </div><!-- end title -->
+
+            <div class="row">
+				<div class="col-md-4">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-seo"></i>
+						</div>
+						<h2>Oklahoma Interactive</h2>
+							<p>Software Developer</p>
+							<p>06/2018 - 01/2019 & 08/2019 - Present</p>
+							<p>Transitioned from intern to full-time web developer in a fast-paced agile environment. Primarily used PHP, Java Spring, and SQL.</p>
+					</div>
+                </div><!-- end col -->
+                <div class="col-md-4">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-development"></i>
+						</div>
+						<h2>Heartland Payment</h2>
+						<p>Software Development Intern</p>
+						<p>05/2019 - 07/2019</p>
+						<p>Worked as an intern under a team of experienced developers, debugging and creating features for a C#/.NET enterprise application.</p>
+					</div>
+                </div><!-- end col -->
+				<div class="col-md-4">
+					<div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-process"></i>
+						</div>
+						<h2>Oklahoma City Thunder</h2>
+						<p>Software Development Intern</p>
+						<p>01/2019 - 05/2019</p>
+						<p>Worked in Angular and Python - Django to help develop an application used by all the Thunder's supporting staff to make quick, informed decisions.</p>
+					</div>
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+	
+
+	<!-- Skills breakdown section -->
+	 <div id="skills" class="section wb">
+        <div class="container">
+            <div class="section-title text-left">
+                <h3>Skills</h3>
+                <p> Self-rating of how comfortable I am with each technology. </p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="testi-carousel owl-carousel owl-theme">
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+								<h3><i class="fa fa-heartbeat fa-border"></i> Typescript </h3>
+								<br>
+								<p class="lead">
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-adjust fa-4x fa-rotate-180"></i>
+								</p>
+								<br>
+                            </div>
+                        </div>
+						<!-- end testimonial -->
+						
+						<div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-git fa-border"></i> Git </h3>
+                                <br>
+								<p class="lead">
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+								</p>
+								<br>
+                            </div>
+                        </div>
+						<!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-bug fa-border"></i> PHP </h3>
+								<br>
+								<p class="lead">
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle-o fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle-o fa-4x"></i>
+								</p>
+								<br>                            
+							</div>
+                        </div>
+						<!-- end testimonial -->
+						
+						<div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-database fa-border"></i> SQL </h3>
+								<br>
+								<p class="lead">
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-adjust fa-4x fa-rotate-180"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle-o fa-4x"></i>
+								</p>
+								<br>                            
+							</div>
+							<br>
+						</div>
+						<!-- end testimonial -->
+
+						<div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-users fa-border"></i> Front-End </h3>
+								<br>
+								<p class="lead">
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-adjust fa-4x fa-rotate-180"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle-o fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle-o fa-4x"></i>
+								</p>
+								<br>                            
+							</div>
+                        </div>
+						<!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-terminal fa-border"></i> Bash/Command Line </h3>
+								<br>
+								<p class="lead">
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle-o fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle-o fa-4x"></i>
+								</p>
+								<br>                            
+							</div>
+							<br>
+						</div><!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-edit fa-border"></i> Python </h3>
+								<br>
+								<p class="lead">
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle-o fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle-o fa-4x"></i>
+								</p>
+								<br>                            
+							</div>
+                        </div>
+                        <!-- end testimonial -->
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-coffee fa-border"></i> Java </h3>
+								<br>
+								<p class="lead">
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle fa-4x"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-adjust fa-4x fa-rotate-180"></i>
+									&nbsp&nbsp&nbsp
+									<i class="fa fa-circle-o fa-4x"></i>
+								</p>
+								<br>                            
+							</div>
+                        </div>
+						<!-- end testimonial -->
+						
+                    </div><!-- end carousel -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+	
+	<!-- Personal OC section -->
+	<div id="personalcontent" class="section lb">
+		<div class="container">
+			<div class="section-title text-left">
+                <h3>Personal Content</h3>
+                <p>Keep up with any tutorials, articles, or projects I've created.</p>
+            </div><!-- end title -->
+			
+			<div class="row">
+				<div class="col-md-4 col-sm-6 col-lg-4">
+					<div class="post-box">
+						<a href="/home/screeps">
+							<div class="post-thumb">
+								<img src="{% static 'uploads/screepsss.png' %}" class="img-fluid" alt="post-img" />
+								<div class="date">
+									<span>Active</span>
+								</div>
+							</div>
+						</a>
+						<div class="post-info">
+							<h4>Screeps Typescript AI</h4>
+							<ul>
+                                <li>by Jacob Waldrip, Brock Sharp</li>
+								<li>| <a href="https://github.com/jakesboy2/screeps-typescript-starter" target="_blank"><b>Github Repo</b></a></li>
+								<li>| Dec 29, 2018 |</li>
+                            </ul>
+							<p>&nbsp&nbspAn AI for the online MMO <a href="https://screeps.com" target="_blank"><b>Screeps</b></a>, a game where you are provided an API and write a script to run every few seconds to interact with the game.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-lg-4">
+					<div class="post-box">
+						<div class="post-thumb">
+							<img src="{% static 'uploads/tutss.png' %}" class="img-fluid" alt="post-img" />
+							<div class="date">
+								<span>On Hold</span>
+							</div>
+						</div>
+						<div class="post-info">
+							<h4>Javascript Standard Lib</h4>
+							<ul>
+								<li>by Jacob Waldrip</li>
+								<br>
+								<li>|<a href="https://github.com/jakesboy2/JS-Standard-Lib" target="_blank"><b> Github Repo</b></a></li>
+								<li>| Jun 27, 2019 |</li>
+                            </ul>
+							<p>&nbsp&nbspA simple "standard library" for Javascript and Typescript. I created this to reduce needing to include bulky libraries for helper functions.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6 col-lg-4">
+					<div class="post-box">
+						<div class="post-thumb">
+							<img src="{% static 'uploads/codess.png' %}" class="img-fluid" alt="post-img" />
+							<div class="date">
+								<span>Active</span>
+							</div>
+						</div>
+						<div class="post-info">
+							<h4>Screeps Tutorial Series</h4>
+							<ul>
+								<li>by Jacob Waldrip</li>
+								<br>
+                                <li>|<a href="https://www.youtube.com/playlist?list=PLwQgSGt0gSyRH6172-QQXj_u6FDEglJHI" target="_blank"><b> Playlist Link</b></a></li>
+								<li>| Mar 27, 2019 |</li>
+                            </ul>
+							<p>&nbsp&nbspA tutorial for the online MMO <a href="https://screeps.com" target="_blank"><b>Screeps</b></a>, meant to help players who are new to programming get started in building their AI.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+{% endblock %}

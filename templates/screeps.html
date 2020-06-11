@@ -1,0 +1,711 @@
+{% extends 'screeps_base.html' %}
+{% load static %}
+
+{% block content %}
+
+   	<section id="home" class="main-banner parallaxie" style="background: url('{% static 'uploads/screeps-banner.png' %}')">
+		<div class="heading">
+            <h1>&ltScreeps AI&gt</h1>
+            <p>Created and maintained by:<br>Jacob Waldrip<br>Brock Sharp</p>
+		</div>
+	</section>
+
+	<!-- Pretty clouds between landing page and home banner -->
+	<svg id="clouds" class="hidden-xs" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 85 100" preserveAspectRatio="none">
+        <path d="M-5 100 Q 0 20 5 100 Z
+            M0 100 Q 5 0 10 100
+            M5 100 Q 10 30 15 100
+            M10 100 Q 15 10 20 100
+            M15 100 Q 20 30 25 100
+            M20 100 Q 25 -10 30 100
+            M25 100 Q 30 10 35 100
+            M30 100 Q 35 30 40 100
+            M35 100 Q 40 10 45 100
+            M40 100 Q 45 50 50 100
+            M45 100 Q 50 20 55 100
+            M50 100 Q 55 40 60 100
+            M55 100 Q 60 60 65 100
+            M60 100 Q 65 50 70 100
+            M65 100 Q 70 20 75 100
+            M70 100 Q 75 45 80 100
+            M75 100 Q 80 30 85 100
+            M80 100 Q 85 20 90 100
+            M85 100 Q 90 50 95 100
+            M90 100 Q 95 25 100 100
+            M95 100 Q 100 15 105 100 Z">
+        </path>
+    </svg>
+
+    <!-- About Code/Screeps Section -->
+    <div id="about" class="section wb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="message-box pull-left">     
+                        <!-- About Screeps Actual Div-->                   
+                        <div id="about-screeps" class="hidden-heading">
+                            <div class="section-title text-center">
+                                <h3>About Screeps</h3>
+                                <hr>
+                                <p>Screeps is an MMO sandbox <br> game for programmers. Write <br> your AI in Javascript and<br>  
+                                battle against other players.<br> May the best bot win.<hr></p>
+                                <a target="_blank" href="https://www.screeps.com"><p class="text-center">&ltView Game&gt</a>
+                                <hr>
+                            </div><!-- end title -->
+                        </div>
+
+                        <!-- Content Box For About Screeps -->
+                        <div id="about-code-content" class="card-1">
+                            <h2> Our Philosophy </h2>
+                            <hr>
+                            <p style="text-align: left;"> &nbsp&nbspWe hold certain development principles in high regard when it comes to developing our code. Constant <b>refactoring</b>, <b>rethinking</b>, and <b>reimplmenting</b>
+                                features in an attempt to make them cleaner, more effective, and less prone to errors is a constant battle that we seek to win.
+                            <br><br> &nbsp&nbsp<b>Maintainability</b> is our top priority. After finishing a major feature we come together and discuss what can be improved. Often times, this means abstracting functionality
+                            into various design patterns, functions, or classes. Constant discussions and changes are considered and completed to restructure our AI in a way that will make it easier to work with based on 
+                            our most common pain-points. 
+                            <br><br> &nbsp&nbsp We make use of various <b>design patterns</b> often within our development. There is also a high emphisis on principles meant to reduce coupling and increase coherence.
+                            <hr><br>
+                            <ul>
+                                <li><h3>Our Favorite Principles</h3></li>
+                                <li><i><p>Click one to learn more</p></i></li>
+                            </ul>
+                            <ul class="list-group">
+                                <li id="list-sp" class="list-group-item list-group-item-action">Strategy Pattern</li>
+                                <li id="list-dry" class="list-group-item list-group-item-action">Don't Repeat Yourself</li>
+                                <li id="list-cp" class="list-group-item list-group-item-action">Configuration & Constants</li>
+                                <li id="list-todo" class="list-group-item list-group-item-action"><strike>TO</strike>DO</li>
+                            </ul>
+                        </p>
+                        </div>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+
+                <div class="col-md-6">
+                    <div class="message-box pull-right">
+
+                        <!-- Button Section For About Our Code-->
+                        <div id="about-code">
+                            <div class="section-title text-center">
+                                <h3> About Our AI </h3>
+                                <hr>
+                                <p>We follow a few simple, but <br> highly effective strategies <br> for keeping our code clean, <br> 
+                                maintainable, and effective. <hr> Created and maintained by:<br> 
+                                <a target="_blank" href="https://www.github.com/jakesboy2">Jacob Waldrip</a> <br> 
+                                <a target="_blank" href="https://www.github.com/UhmBrock">Brock Sharp</a></p>
+                                <a target="_blank" href="https://github.com/jakesboy2/screeps-typescript-starter"><p class="text-center">&ltView Code&gt</a>
+                                <hr>
+                            </div><!-- end title -->
+                        </div>
+
+                        <!-- Content Box For About Screeps -->
+                        <div id="about-screeps-content" class="card-1 hidden-heading">
+                            <h2> What Is Screeps? </h2>
+                            <hr>
+                            <p style="text-align: left;">
+                                    &nbsp&nbspScreeps is a massive multiplayer online real-time strategy game. Each player can create their own colony in a single persistent world shared by all players.
+                                <br><br> &nbsp&nbspUsing the game's provided <a href="https://docs.screeps.com/api/" target="_blank">API</a>, you program your AI in Javascript, Typescript, or any language that compiles into 
+                                web assembly.
+                                <br><br> &nbsp&nbspYou control every aspect of the game from your code. Every 'tick' (roughly 2.5-3.5 seconds real-time), player's scripts are ran and intents are queued based on the results
+                                of your code. Intents include things such as calling a method on an instance of a Spawn object to create a new <a href="https://docs.screeps.com/creeps.html" target="_blank">creep</a>, moving a creep in a particular direction, upgrading your room,
+                                attacking another player, harvesting resources, and building or repairing various structures.
+                                <br><br> &nbsp&nbspYour code runs even when you are offline. The world is always running. Because of its nature as a sandbox game, there are no win-conditions or goals; however, there is a leaderboard
+                                that tracks the amount of energy you have used to upgrade your rooms. Claiming more rooms gives you more opportunity to gain control points, more territory in the world, and more notoriety amoung other players.
+                                <br><br> &nbsp&nbspThere is a global market place you can use to trade resources with other players, and various powerful players have come together to create alliances which has resulted in large scale world wars breaking out. <br><br><br>
+                            </p>
+                        </div>
+                    </div><!-- end media -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+
+            <!-- Modals for describing the list items on the ABOUT CODE section of this page -->
+            <!-- SP MODAL -->
+            <div id="list-sp-modal" class="p-modal hide-modal">
+                <div class="p-modal-content">
+                    <h3>Strategy Pattern</h3>
+                    <hr>
+                    <p style="padding: 10px">
+                        &nbsp&nbsp We make use of this design pattern more than any other in our code-base. This was the result of our first major refactor. The issue 
+                       that we were trying to solve was the amount of switch statements whose only purpose was to decide what helper function to call.
+                       Eventually, an idea was born. To demonstrate the concept and our application of it, I will use our API function that generates the 
+                       spawning limits for each room.
+                       <br><br>&nbsp&nbsp For a quick introduction to the context here, we have our room split up into multiple 'Room States' based on conditions being met
+                       such as, the amount of energy available, the presence of particular structures, and the presence of option flags. To replace the switch statement that decided how many of 
+                       each creep we wanted at each room state, we needed a way to abstract out the entire concept of creep limits and have a file for each room state we want to configure the limits for.
+                       <hr><p style="text-align: center; color: black; font-size: 12px;"><i>Click the box on each step below to view the example.</i></p>
+                       <ul style="padding: 10px;" class="list-group">
+                           <!-- Interface Step -->
+                           <a href="/static/screenshots/interface.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-secondary a-override">
+                               <h4><u>Define Interface</u></h4>
+                               The first step is to set up an interface to use for generating the spawn limits for the room. This contains the definitions for 
+                               generating domestic and remote limits, as well as a property reference to the name of the current room state. This is so we can find it at run-time.
+                            </li></a>
+                            
+                            <!-- Instance Def Step -->
+                            <a href="/static/screenshots/instance-def.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-dark a-override">
+                                <h4><u>Implementation Set-up</u></h4>
+                                We then defined a class that implements the interface from the previous step, for every room state we wanted to use. The only trick here is defining 
+                                the name of the current room state as defined in class we are in, and binding the methods to the instance of this object.
+                            </li></a>
+
+                            <!-- generate instance Step -->
+                            <a href="/static/screenshots/generate-instance.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-secondary a-override">
+                                <h4><u>Implementation Meat & Bones</u></h4>
+                                This is where we actual set up the specific room state's implementation. For this room state, we create and return the object containing all of the 
+                                creep roles we want to define limits for. This same process is done below on the remote limits as well, as they are split into different methods for 
+                                maintainability. 
+                            </li></a>
+
+                            <!-- Constant array Step -->
+                            <a href="/static/screenshots/constant-arr.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-dark a-override">
+                                <h4><u>Array of Implementation Instances</u></h4>
+                                Here we simply define an array that contains the instance of each of these implementations. This is the array we will use to decide at run-time which instance 
+                                we are going to call for each unique situation and state the code can be in at any given time. 
+                            </li></a>
+                            
+                            <!-- generate abstract Step -->
+                            <a href="/static/screenshots/generate-abstract.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-secondary a-override">
+                                <h4><u>Select an Implementation at Run-time</u></h4>
+                                For this step, we get the room state of the current room, and loop over the array created in the previous step until we find a match. From there we simply 
+                                return the value of that implmentation's method. This allows each room to get its own custom object that defines the spawn limits for itself.
+                            </li></a>
+
+                            <!-- Set limits Step -->
+                            <a href="/static/screenshots/set-limits.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-dark a-override">
+                                <h4><u>Setting the Limits</u></h4>
+                                In here, we use our Memory API to update the limits for the room, by passing in the room we are updating, and the object returned from that room's configured limits 
+                                for this room state, generated using the above steps. The exception here is generating a military creep queue, because it works off a queue instead of limits; however, remote 
+                                and domestic creeps are generated using the strategy pattern as described here. 
+                            </li></a>
+                       </ul>
+                       <hr>
+                       <p style="padding: 10px">&nbsp&nbsp These steps are repeated for several modules of our code. Namely, creep roles, creep spawning helpers (options, name, target/home rooms, etc), flag handlers, and spawn limits.
+                       This design pattern provides a powerful tool for separating your logic and clearly seeing where each section of each state the room can be in is defined for easy maintainence, reliability,
+                       and bug-squashing.</p>
+                    </p>
+                </div>
+            </div>
+
+            <!-- DRY MODAL -->
+            <div id="list-dry-modal" class="p-modal hide-modal">
+                <div class="p-modal-content">
+                    <h3>Don't Repeat Yourself</h3>
+                    <hr>
+                    <p style="padding: 10px">
+                        The rational behind this pattern involves not wanting to duplicate code. This has two reason: making refactoring and code changes simpler and less prone to bugs, and reducing overall development time.
+                        <hr><p style="text-align: center; color: black; font-size: 12px;"><i>Click the box on each step below to view the example.</i></p>
+                        <hr><h3> Memory Access </h3>
+                        <ul style="padding: 10px;" class="list-group">
+                            <!-- Set limits Step -->
+                            <a href="/static/screenshots/get-fill-jobs.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-dark a-override">
+                                <h4><u>Example 1</u></h4>
+                                Every creep that needs to get these jobs uses this function. Theres no reason to manually search the array from memory yourself, and if we change how we 
+                                want to get the fill jobs, or what we consider a fill job, we can change it here and the changes will reflect on every creep.
+                            </li></a>
+
+                            <!-- Example 2 -->
+                            <a href="/static/screenshots/get-struct-type.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-secondary a-override">
+                                <h4><u>Example 2</u></h4>
+                                Getting an array of structure of a particular type. This is used extensively throughout the code and saves an incredible amount of space and keeps the code clean.
+                            </li></a>
+                       </ul>
+
+                       <hr><h3> Creep Processes </h3>
+                       <ul style="padding: 10px;" class="list-group">
+                            <!-- Example 1 -->
+                            <a href="/static/screenshots/travel-to.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-dark a-override">
+                                <h4><u>Example 1</u></h4>
+                                This function is used on every creep as well. It is the abstracted out movement function for creeps, which has logic such as routing around hostile rooms, using specific 
+                                movement matrices, and updating the memory for empire scouting.
+                            </li></a>
+
+                            <!-- Example 2 -->
+                            <a href="/static/screenshots/move-off-exit.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-secondary a-override">
+                                <h4><u>Example 2</u></h4>
+                                This function is used in the manager for every creep. It detects if the creep is on an exit tile, and moves them off of it.
+                            </li></a>
+                       </ul>
+                       <hr>
+                       <p style="padding: 10px">&nbsp&nbsp This principle is followed as much as possible, and is the entire rationale behind our Memory API. 
+                        Instead of handling error cases and stale data on every memory access, we can go through the Memory API and always make sure we 
+                        have the data we need, error free, when we need it. In addition, if you change the path or logic behind something, you only need to change 
+                        it in one place, rather than every place the feature or logic is used. </p>
+                    </p>
+                </div>
+            </div>
+
+            <!-- CP MODAL -->
+            <div id="list-cp-modal" class="p-modal hide-modal">
+                <div class="p-modal-content">
+                    <h3>Configuration & Constants</h3>
+                    <hr>
+                    <p style="padding: 10px">
+                            This principle is similar to the previous one, in that it allows for quick code changes and configuration, and consistant behavior and values across multiple usages.
+                            <hr><p style="text-align: center; color: black; font-size: 12px;"><i>Click the box on each step below to view the example.</i></p>
+                            <hr><h3> CPU Management </h3>
+                            <ul style="padding: 10px;" class="list-group">
+                                <!-- Set limits Step -->
+                                <a href="/static/screenshots/config-def.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-dark a-override">
+                                    <h4><u>Definition</u></h4>
+                                    We define the various limits for running each module of our code. These are the minimum value of the bucket to be to run that module.
+                                </li></a>
+    
+                                <!-- Example 2 -->
+                                <a href="/static/screenshots/config-impl.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-secondary a-override">
+                                    <h4><u>Usage</u></h4>
+                                    We take the defined configuration values and compare them to the bucket to decide if we have enough bucket to justify running the module.
+                                </li></a>
+                           </ul>
+    
+                           <hr><h3> Constant Usage </h3>
+                           <ul style="padding: 10px;" class="list-group">
+                                <!-- Example 1 -->
+                                <a href="/static/screenshots/constant-def.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-dark a-override">
+                                    <h4><u>Definition</u></h4>
+                                    This provides us with consistent string values to represent our creep roles. Without this, the potential for accidently misspelling or capitalizing something wrong increases the chance for errors.
+                                </li></a>
+    
+                                <!-- Example 2 -->
+                                <a href="/static/screenshots/constant-impl.png" target="_blank"><li class="list-group-item list-group-item-action list-group-item-secondary a-override">
+                                    <h4><u>Usage</u></h4>
+                                    Here is an example of us using these creep role constants to reference a role to make a decision about logic.
+                                </li></a>
+                           </ul>
+                           <hr>
+                           <p style="padding: 10px">&nbsp&nbsp This principle is followed as much as possible as well. The idea is we can make quick changes to our configuration and tweak numbers slightly to come up with 
+                            an effective and efficient setup that allows us to manage our economy and CPU usage without making code changes. You can simply change a value in the configuration. The constants also help with keeping 
+                            our code clean, clear, and error free.</p>
+                        </p>
+                </div>
+            </div>
+
+            <!-- TODO MODAL -->
+            <div id="list-todo-modal" class="p-modal hide-modal">
+                <div class="p-modal-content">
+                    <h3><strike>TO</strike>DO</h3>
+                    <hr>
+                    <p>
+                            &nbsp&nbspI can't really think of a way to provide examples and screenshots for this, so the best I can do is provide the rationale behind this principle. 
+                            Essentially, I find myself often writing a TODO comment to abstract something into a function, or improve the logic for a situation in an attempt to just get the working product out ASAP.
+                            What we attempt to do in this case is simply delete the comment, and do what we were writing the comment for. 
+                            <br><br>&nbsp&nbsp There has to be a balance here, you don't want to spend a ton of time going down a rabbit hole on a feature you might not even end up needing because you discover you need to redesign 
+                            the feature as you progress through its development. The line lies in making sure you keep up with your TODO comments and issues as you finish features to make sure you don't collect a large 
+                            backlog of incomplete features to build your future code off of. 
+                            <br><br>&nbsp&nbsp This also supports constant refactoring. We always look for chances to re-evaluate our code and find places to improve. This has resulted in a code base that has been in 
+                            development now for over a year and has maintained clean and easy to add features and fix bugs within.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top: 100px;">
+                <div class="col-sm-12">
+                    <div class="text-center">
+                        <button class="btn btn-primary" id="about-btn">View Our Philosophy</button>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+	<!-- Design Overview Section -->
+	<div id="designoverview" class="section lb">
+		<div class="container">
+			<div class="section-title text-left">
+                <h3>Design Overview & Structure</h3>
+                <p>Need a place to go? Welcome aboard, we'll get you where you're going.</p>
+            </div><!-- end title -->
+		</div>
+	</div>
+
+	<!-- Creep Roles Section -->
+	<div id="creeproles" class="section wb">
+		<div class="container">
+            <div class="section-title text-left">
+                <h3>The Original Creeps</h3>
+                <p>&nbsp Every creep born is a clone of the orignal ancestor of the role they fill. The <i>original</i> colony 
+                was said to have ruled the cartisian coordinate system far and wide. After a bloody civil war that almost destroyed 
+                the colony as we know it, the remaining brothers came together and formed a peaceful coalition of creeps. They 
+                created a system capable of cloning themselves for a short period of time to carry out the tasks they once did. The original 
+                colonists still rule the Empire to this day, employing their army of clones to grow their empire larger than ever thought possible.</p>
+            </div><!-- end title -->
+
+            <!-- Content Start for Creep Roles-->
+            <div class="row">
+
+                <!-- Selecting a Creep Role -->
+                <div class="col-md-6">
+                    <div class="message-box pull-left">    
+                        <!-- Content Box For Creep Roles -->
+                        <div id="creep-role-selector" class="card-1">
+                            <h2>Learn More About The Orignal Creeps</h2>
+                            <hr>
+                            <div class="row">
+                                <!-- Left Side Creep Table -->
+                                <div class="col-md-6">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-hover">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th scope="col">Role</th>
+                                                    <th scope="col">Type</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="table-warning">
+                                                <!-- Miner Creep Selector -->
+                                                <tr id="miner-row">
+                                                    <th scope="row">Miner</th>
+                                                    <td>Domestic</td>
+                                                </tr>
+                                                <!-- Harvester Creep Selector-->
+                                                <tr id="harvester-row">
+                                                    <th scope="row">Harvester</th>
+                                                    <td>Domestic</td>
+                                                </tr>
+                                                <!-- Lorry Creep Selector-->
+                                                <tr id="lorry-row">
+                                                    <th scope="row">Lorry</th>
+                                                    <td>Domestic</td>
+                                                </tr>
+                                                <!-- Claimer Creep Selector-->
+                                                <tr id="claimer-row">
+                                                    <th scope="row">Claimer</th>
+                                                    <td>Remote</td>
+                                                </tr>
+                                                <!-- Mineral Miner Creep Selector-->
+                                                <tr id="mineral-row">
+                                                    <th scope="row">Mineral Miner</th>
+                                                    <td>Domestic</td>
+                                                </tr>
+                                                <!-- Power Upgrader Creep Selector -->
+                                                <tr id="power-row">
+                                                    <th scope="row">Upgrader</th>
+                                                    <td>Domestic</td>
+                                                </tr>
+                                                <!-- Remote Colonizer Creep Selector-->
+                                                <tr id="r-colonizer-row">
+                                                    <th scope="row">R. Colonizer</th>
+                                                    <td>Remote</td>
+                                                </tr>
+                                                <!-- Remote Miner Creep Selector-->
+                                                <tr id="r-miner-row">
+                                                    <th scope="row">R. Miner</th>
+                                                    <td>Remote</td>
+                                                </tr>
+                                                <!-- Remote harvester Creep Selector-->
+                                                <tr id="r-harvester-row">
+                                                    <th scope="row">R. Harvester</th>
+                                                    <td>Remote</td>
+                                                </tr>
+                                                <!-- Remote Reserver Creep Selector-->
+                                                <tr id="r-reserver-row">
+                                                    <th scope="row">R. Reserver</th>
+                                                    <td>Remote</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <!-- Right Side Creep Table -->
+                                <div class="col-md-6">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered table-hover">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th scope="col">Role</th>
+                                                    <th scope="col">Type</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="table-warning">
+                                                <!-- Worker Creep Selector -->
+                                                <tr id="worker-row">
+                                                    <th scope="row">Worker</th>
+                                                    <td>Domestic</td>
+                                                </tr>
+                                                <!-- Manager Creep Selector-->
+                                                <tr id="manager-row">
+                                                    <th scope="row">Manager</th>
+                                                    <td>Domestic</td>
+                                                </tr>
+                                                <!-- Domestic Defender Creep Selector-->
+                                                <tr id="d-defender-row">
+                                                    <th scope="row">D. Defender</th>
+                                                    <td>Military</td>
+                                                </tr>
+                                                <!-- Remote Defender Creep Selector-->
+                                                <tr id="r-defender-row">
+                                                    <th scope="row">R. Defender</th>
+                                                    <td>Military</td>
+                                                </tr>
+                                                <!-- Zealot Creep Selector-->
+                                                <tr id="zealot-row">
+                                                    <th scope="row">Zealot</th>
+                                                    <td>Military</td>
+                                                </tr>
+                                                <!-- Stalker Creep Selector -->
+                                                <tr id="stalker-row">
+                                                    <th scope="row">Stalker</th>
+                                                    <td>Military</td>
+                                                </tr>
+                                                <!-- Medic Creep Selector-->
+                                                <tr id="medic-row">
+                                                    <th scope="row">Medic</th>
+                                                    <td>Military</td>
+                                                </tr>
+                                                <!-- Drainer Tank Creep Selector-->
+                                                <tr id="drainer-tank-row">
+                                                    <th scope="row">Drainer Tank</th>
+                                                    <td>Military</td>
+                                                </tr>
+                                                <!-- Drainer Medic Creep Selector-->
+                                                <tr id="drainer-medic-row">
+                                                    <th scope="row">Drainer Medic</th>
+                                                    <td>Military</td>
+                                                </tr>
+                                                <!-- Scout Creep Selector-->
+                                                <tr id="scout-row">
+                                                    <th scope="row">Scout</th>
+                                                    <td>Remote</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- End Col-->
+
+                <!-- Viewing Details About Creep Role -->
+                <div class="col-md-6">
+                    <div id="creep-bio-div" class="message-box pull-right">
+                        <h2>Creep Biography</h2>
+                        <hr>
+                        <!-- Miner Bio -->
+                        <div id="miner-bio" class="hidden-heading">
+                            <p>
+                                <b><i>Gus "Miner" Johnson</i></b><br><br>
+                                Before the <i>Great War</i>, Gus spent his days working in the 
+                                energy mines with his father and four brothers. After an accident 
+                                in the mines, Gus emerged as the sole survivor.
+                                With no family, no friends, and nowhere to go, Gus decided to take his 
+                                talents to the new lands out west. He didn't know anything about it, 
+                                just that his old friends called the foreign lands the 'Screeps', and complained they 
+                                were going to put them out of business due to the abundance of energy 
+                                sources and migrant workers ready to trade body for coin.
+                                Gus teammed up with some fresh migrants he met on the journey over and 
+                                together they formed a community focused on surviving out in this new world. `
+                            <hr>
+                                The miner creep is the foundation of the room. They sit diligantly on each 
+                                energy source within the room and mine energy. They do not carry it, or move it, or place 
+                                it anywhere, they simply mine it and allow it to drop below them, where a container 
+                                will generally be in place to accept their offering. Without the miner, the room cannot exist.
+                            <hr>
+                            </p>
+                        </div>
+                        <!-- Harvester Bio -->
+                        <div id="harvester-bio" class="hidden-heading">
+                            <b><i>Henry "Harvester" Harrington</i></b><br><br> 
+                                Henry spent his days as an innkeeper of a five-star Yelp reviewed tavern. 
+                                His tavern was often considered the greatest in all the lands until the <i>Great War</i>
+                                left it in burning ruins. Without a place to go, or a family to turn to, Henry searched 
+                                for new lands to lay claim to. The Originals needed someone to take care of their day to day life,
+                                and Henry needed a place to call home. 
+                            <hr>
+                                The harvester creep is another integral part of the room. Part of the "Big Three" roles that are required
+                                to sustain a room. They handle moving energy from the miners to the storage, and then fill the spawn and 
+                                extensions. They essentially handle keeping the spawn churning and provide energy for the workers.
+                            <hr>
+                        </div>
+                        <!-- Worker Bio -->
+                        <div id="worker-bio" class="hidden-heading">
+                            <b><i>Roy "Worker" Jefferson</i></b><br><br> 
+                                Roy made a living doing odd jobs for everybody he knew. "Nobody in town was better with a tool" was a phrase that rang
+                                true no matter what town he happened to be in that week. Equipped with the skills to make anything happen, he was headhunted
+                                by the Originals seeking a handy-man to help strengthen their colony.
+
+                            <hr>
+                                The worker is the final integral part of the "Big Three" roles required to run a room. They handle everything
+                                in the room that isn't logistics. This includes repairing, building, and upgrading the room itself at lower levels. 
+                                They are only allowed to pull energy from the storage to use for the room, as to not starve the harvesters 
+                                of their energy.
+                            <hr>
+                        </div>
+                        <!-- Lorry Bio -->
+                        <div id="lorry-bio" class="hidden-heading">
+                            <b><i>Daisy "Lorry" Neutron</i></b><br><br> 
+                                Daisy spent many years in university learning the ins and outs of chemistry. On her last year, before graudation, the war broke out
+                                and left her university destroyed. Looking for somewhere to apply her skills, the Originals brought her on board as a full time 
+                                scientist without hesitation to run their labs.
+                            <hr>
+                                The Lorry handles all lab related opereations. They carry the resources from the storage into the labs, carry out the reactions
+                                and bring the finished product back to the storage.
+                            <hr>
+                        </div>
+                        <!-- Claimer Bio -->
+                        <div id="claimer-bio" class="hidden-heading">
+                            <b><i>Dave "Claimer" Crockett</i></b><br><br> 
+                                Dave was one of the first Original creeps, and one of the first of any Creep, to explore the new territory. He spent years finding new lands to 
+                                settle and decided to start finding others to build a colony with immediately following the <i>Great War</i> in interest of self preservation. 
+                            <hr>
+                                The Claimer travels to new rooms and claims them for the colony. Once claimed, their job has been completed and they are recycled.
+                            <hr>
+                        </div>
+                        <!-- Miner Bio -->
+                        <div id="mineral-bio" class="hidden-heading">
+                            <b><i>Theadore "Mineral Miner" Bebola</i></b><br><br> 
+                                Theadore spent his days searching for exotic minerals. He was never interested in being a mere miner for a large corporation, but rather find his own path and sell 
+                                the exotic minerals he found for a pretty penny. Once the war had ended, Theadore needed a home, and the Originals needed minerals to supply the colony with the 
+                                boosts needed for domination. It was a match made in heaven.
+                            <hr>
+                                The Mineral Miner handles going to extractors and extracting minerals from it. They are self contained and move the minerals back to the storage on their own without 
+                                the need of other creeps to get involved.
+                            <hr>
+                        </div>
+                        <!-- Harvester Bio -->
+                        <div id="power-bio" class="hidden-heading">
+                            <b><i>Derrick "Power Upgrader" Henry</i></b><br><br> 
+                                Derrick was a football player before the war broke out. One of the greatest running backs in the league. Now that his money meant nothing, all he had was incredible 
+                                size, strength, and tenacity. The Originals took him under their protection in exchange for his incredible strength.
+                            <hr>
+                                The Power Upgrader sits on the controller and is supplied energy via Links to upgrade the controller full time. This frees up the time wasted traveling to the storage 
+                                to get energy and allows the workers to focus on repairing the walls in the room, keeping the energy usage of the room more consistant and controllable.
+                            <hr>
+                        </div>
+                        <!-- Worker Bio -->
+                        <div id="r-colonizer-bio" class="hidden-heading">
+                            <b><i>Bill "Remote Colonizer" Lewis</i></b><br><br> 
+                                Bill had extensive experience building settlements in the new world, considering how much money he made from doing so. After the war, it seemed the only settlments still standing 
+                                were the ones designed and defended by him. The Originals noticed this, and quickly negogiated the integration of his skills into the colony.
+                            <hr>
+                                The Remote Colonizer follows the claimer into the unknown, building up new rooms from scratch until the room is mature enough to handle itself.
+                            <hr>
+                        </div>
+                        <!-- Lorry Bio -->
+                        <div id="r-miner-bio" class="hidden-heading">
+                            <b><i>Jeffery "Remote Miner" Billington</i></b><br><br> 
+                                Jeffery was a coal miner before the war. He needed a home, and the Originals needed labor.
+                            <hr>
+                                The Remote Miner acts as a regular miner, but in remote rooms.
+                            <hr>
+                        </div>
+                        <!-- Claimer Bio -->
+                        <div id="r-harvester-bio" class="hidden-heading">
+                            <b><i>Jessie "Remote Harvester" Yawnev</i></b><br><br> 
+                                Jessie was the bartender at the same Inn as Henry Harrington, the Originals' main harvester. He wouldn't join unless she came along as well, as they make a wonderful team.
+                            <hr>
+                                The Remote Harvester acts as a regular harvester, but in remote rooms. They simply bring the energy into the main room's storage and repair structures in the remote room.
+                            <hr>
+                        </div>
+                        <!-- Miner Bio -->
+                        <div id="r-reserver-bio" class="hidden-heading">
+                            <b><i>Jax "Remote Reserver" Jefferson</i></b><br><br> 
+                                A computer expert. At least before they were all destroyed. His talents came in handy when the Originals needed someone who was capable of holding rooms 
+                                as reserved while the rest of the remote squad drained it of its resources.
+                            <hr>
+                                The Remote Reserver reserves the controller in the remote room. They only are created when the reservation timer falls below a configurable value.
+                            <hr>
+                        </div>
+                        <!-- manager Bio -->
+                        <div id="manager-bio" class="hidden-heading">
+                            <b><i>Karen "Remote Colonizer" Ugendo</i></b><br><br> 
+                                Karen managed and ran a grocery store. The perfect candidate for managing and distrubting information throughout the room. Also, being incredibly overweight, she isn't able to move well 
+                                which bodes well to her position staying in one place and all structures being built around her so she can move them where they need to go easier.
+                            <hr>
+                                The manager has no move parts, they sit in the middle of the bunker and move energy to and from the storage, terminal, link, tower, spawn, and nuker within its range. It helps 
+                                the room run more smoothly so every creep and structure can have energy where it needs, when it needs it.
+                            <hr>
+                        </div>
+                        <!-- domestic defender Bio -->
+                        <div id="d-defender-bio" class="hidden-heading">
+                            <b><i>Soldier #237</i></b><br><br> 
+                            <i>History Unknown</i><br>
+                            The only thing known about this creature is it is not from here, but it defends those who summon it with zealous ferocity.
+                            <hr>
+                                The Domestic Defender is summoned to wait patiently in the bunker and defend it from external threats.
+                            <hr>
+                        </div>
+                        <!-- remote defender Bio -->
+                        <div id="r-defender-bio" class="hidden-heading">
+                            <b><i>Soldier #238</i></b><br><br> 
+                                <i>History Unknown</i><br>
+                                The only thing known about this creature is it is not from here, but it defends those who summon it with zealous ferocity.
+                            <hr>
+                                The Remote Defender is summoned to hunt and destroy threats that occur in remote rooms.
+                            <hr>
+                        </div>
+                        <!-- zealot Bio -->
+                        <div id="zealot-bio" class="hidden-heading">
+                            <b><i>Soldier #135</i></b><br><br> 
+                                <i>History Unknown</i><br>
+                                This creature is hidious, stands on two larger, towering legs, and has blades for limbs.
+                            <hr>
+                                The Zealot is a powerful melee creep, hell-bent on destroying all in it's path.
+                            <hr>
+                        </div>
+                        <!-- stalker Bio -->
+                        <div id="stalker-bio" class="hidden-heading">
+                            <b><i>Soldier #03</i></b><br><br> 
+                                <i>History Unknown</i><br>
+                                This creature stands on four legs, and shoots powerful lasers from where you'd think its eyes are supposed to be.
+                            <hr>
+                                The Stalker is a powerful ranged creep, which will kite any creep that comes close to it before focusing 
+                                back on its original target. 
+                            <hr>
+                        </div>
+                        <!-- medic Bio -->
+                        <div id="medic-bio" class="hidden-heading">
+                            <b><i>Dr. "Medic" Kellog</i></b><br><br> 
+                                The Dr. was a friend of the first few Originals. He spent his days as a combat medic and brings those skills to the colony where he was invited immediately following the 
+                                end of the war.
+                            <hr>
+                                The Medic is always part of a military squad. They simply follow their squad around, and in the event they all are defeated, they heal other allies, including other colonies that are 
+                                allied with our own.
+                            <hr>
+                        </div>
+                        <!-- drainer medic Bio -->
+                        <div id="d-medic-bio" class="hidden-heading">
+                            <b><i>Soldier #998</i></b><br><br> 
+                                <i>History Unknown</i><br>
+                                A large creature capable with skin that secretes substances with incredible healing properties.
+                            <hr>
+                                The Tower Drainer Medic is part of the tower drainer squad. They wait with the tower drainer tank outside of the 
+                                attacking room and heal it.
+                            <hr>
+                        </div>
+                        <!-- drainer tank Bio -->
+                        <div id="d-tank-bio" class="hidden-heading">
+                            <b><i>Soldier #999</i></b><br><br> 
+                                <i>History Unknown</i><br>
+                            <hr>
+                            The Tower Drainer Tank is part of the tower drainer squad. They wait with the tower drainer medic inside of the 
+                            attacking room and absorb tower shots.
+                            <hr>
+                        </div>
+                        <!-- scout Bio -->
+                        <div id="scout-bio" class="hidden-heading">
+                            <b><i>Julio "Scout" Quicklegs</i></b><br><br> 
+                                Julio played baseball since he was a child. He has the fastest legs in the west. He was an ideal canditate for the Originals needing 
+                                somebody to explore areas around them.
+                            <hr>
+                                The Scout spawns sporadically and moves around the empire, from room to room exploring and collecting information about 
+                                surrounding rooms. This information is used for global pathing, finding rooms to mine, claim, and attack.
+                            <hr>
+                        </div>
+                    </div>
+                </div><!-- End Col -->
+            </div>
+		</div>
+	</div>
+	
+
+	<!-- Flags Guide Section -->
+	<div id="flagsguide" class="section lb">
+		<div class="container">
+			<div class="section-title text-left">
+                <h3>Flags Guide</h3>
+                <p>Need a place to go? Welcome aboard, we'll get you where you're going.</p>
+            </div><!-- end title -->
+		</div>
+	</div>
+{% endblock %}
