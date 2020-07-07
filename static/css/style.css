@@ -359,8 +359,7 @@ a img.aligncenter {
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 0;
-    opacity: .6;
+    z-index: 1;
 }
 .heading{
 	color: #fff;
