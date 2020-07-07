@@ -343,31 +343,35 @@ a img.aligncenter {
 -------------------------------------------------------------------*/
 
 .main-banner{
-	height: 20%;
+	height: 100%;
 	position: relative;
 }
 
 .main-banner{
 	display: table;
     width: 100%;
+	text-align: center;
 }
 .main-banner::after {
     content: " ";
     position: absolute;
-    top: 50;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    background-color: #000;
+    z-index: 0;
+    opacity: 0%;
 }
 .heading{
 	color: #fff;
 	display: table-cell;
-	vertical-align: middle;
+	vertical-align: top;
 	position: relative;
 	z-index: 1;
 }
 .heading h1{
-	color: #ffffff;
+	color: #151418;
 	font-weight: 700;
 	font-size: 62px;
 	text-transform: uppercase;
@@ -378,7 +382,7 @@ a img.aligncenter {
 }
 
 .heading h3{
-	color: ffffff;
+    color: ffffff;
 }
 
 .cd-words-wrapper {

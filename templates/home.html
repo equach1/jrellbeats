@@ -3,20 +3,13 @@
 
 {% block content %}
 
-   	<section id="home" class="main-banner parallaxie" style="background: url('{% static 'uploads/j-logo1.jpg' %}')">
-		<div class="heading">
-			<h1>Jrell Beats</h1>
-			<div class="container">
-				<div class="gallery-menu row">
-					<div class="col-md-12">
-						<div class="button-group filter-button-group text-left">
-							<button data-filter=".gal_learn">Learning</button>
-							<button data-filter=".gal_ent">Entertainment</button>
-						</div>
-					</div>
-				</div>
+	<section id="home" class="main-banner parallaxie" style="background: url('{% static 'uploads/j-logo1.jpg' %}'); overflow: hidden;">
+		<div class="heading" style="overflow: hidden;">
+			<h1>Jrell <span style=color:#bb9205>Beats</span></h1>
+			<div class="col-lg-8 mx-auto" style="padding-top: 30%;" >
+				<span style="padding: 5% 60% 30% 5%;"><a class="btn btn-primary btn-xl js-scroll-trigger" href="https://www.google.com/">Drum Kits</a></span>
+				<a class="btn btn-primary btn-xl js-scroll-trigger" href="https://www.google.com/">Get Free Beats</a>
 			</div>
-
 		</div>
 	</section>
 {% endblock %}
