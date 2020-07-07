@@ -350,7 +350,7 @@ a img.aligncenter {
 .main-banner{
 	display: table;
     width: 100%;
-	text-align: center;
+    text-align: center;
 }
 .main-banner::after {
     content: " ";
@@ -359,7 +359,6 @@ a img.aligncenter {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #000;
     z-index: 0;
     opacity: .6;
 }

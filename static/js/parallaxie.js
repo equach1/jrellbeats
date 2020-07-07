@@ -17,6 +17,7 @@
             size: 'cover',
             pos_x: 'center',
             offset: 0,
+            
         }, options );
 
         this.each(function(){
