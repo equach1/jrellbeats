@@ -1,0 +1,44 @@
+.parallaxMain { 
+    /* The image used */
+    background: url("../img/tulsa.jpg");
+  
+    /* Set a specific height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    /*background-attachment: fixed; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .parallaxNeedHelp { 
+    /* The image used */
+    background: url("../img/bigstock.jpg");
+  
+    /* Set a specific height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+  /*  background-attachment: fixed;*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.row
+{
+    margin-right: 0 !important;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .container27 {
+        margin: 0px 0px 60px 0px;
+    }
+}
+
+.container
+{
+    padding-right: 0 !important;
+}
