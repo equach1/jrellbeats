@@ -39,21 +39,27 @@
 		} href="https://google.com" class="button">Go to Google</a>-->
 
 		<h1>Contact Me For Free Beats</h1>
-		<form>
-			<link rel="stylesheet" href="./style.css">
-			<script src="./main.js"></script>
+		<form action="https://formspree.io/FORM_ID"
+			method="POST">
+			<head>
+				<link rel="stylesheet" href="./style.css">
+				<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+				<script src="./main.js"></script>
+			</head>
 			<label>
 				Name
-				<input type="text" class="message"/>
+				<input type="text" name="name" class="message"/>
 			</label>
 			<label>
 				E-mail
-				<input type ="email" class="email"/>
+				<input type ="email" name="subject" class="email"/>
 			</label>
 			<div class="status">
 
 			</div>
-			<button type="Submit">Send</button>
+			<button type="Submit" class="submit">
+				Send
+			</button>
 		</form>
 		
 	</div>
