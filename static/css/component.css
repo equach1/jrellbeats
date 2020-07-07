@@ -223,7 +223,7 @@ figure .caption {
 {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
+  /*-webkit-transform-style: preserve-3d;*/
 }
 
 .card.flipped .front, .card.flipped .back
