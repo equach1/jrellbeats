@@ -13,26 +13,19 @@
 </head>
 
 <body>
-    <button type="button" id="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-        Sign Up for Free Beats
-      </button>
+    <button class="modal-btn">Launch Modal</button>
 
-    <!-- Modal -->
-    <div class = "modal">
-        <div class="modal_contents">
-            <div class="modal_close-bar">
-                <span>x</span>
-            </div>
-            <p>Please enter your email address to find out 
-                more</p>
+    <div class="modal-bg">
+        <div class="modal">
+            <h2>Sign up for free Beats!</h2>
+            <label for="name">Name: </label>
+            <input type="text" name="name">
+            <label for="email">Email: </label>
+            <input type="email" name="email">
+            <button>Submit</button>
+            <span class="modal-close">X</span>
         </div>
-            <form>
-                <input type="email" placeholder="Your best email">
-                <button>Submit</button>
-            </form>
     </div>
-
-
    <!--- <div class="bg-modal">
         <div class="modal-content">
             <div class="close">+</div>
