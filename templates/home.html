@@ -3,13 +3,47 @@
 
 {% block content %}
 
-	<section id="home" class="main-banner parallaxie" style="background: url('{% static 'uploads/j-logo1.jpg' %}'); overflow: hidden;">
-		<div class="heading" style="overflow: hidden;">
-			<h1>Jrell <span style=color:#bb9205>Beats</span></h1>
-			<div class="col-lg-8 mx-auto" style="padding-top: 30%;" >
-				<span style="padding: 5% 60% 30% 5%;"><a class="btn btn-primary btn-xl js-scroll-trigger" href="https://www.google.com/">Drum Kits</a></span>
-				<a class="btn btn-primary btn-xl js-scroll-trigger" href="https://www.google.com/">Get Free Beats</a>
+	<section id="home" class="main-banner parallaxie"">
+		<div class="heading">
+			<h1>Prod. By <span style=color:#bb9205>J. A</span></h1>
+			<br><br>
+			<a title="Google" href="https://www.google.com"><img src="{% static 'uploads/j-logo4.jpg' %}" class="img-fluid" alt="Image"></a>
+			<div class="col-lg-8 mx-auto" style="padding-top: 3%;" >
+				<a href="https://www.google.com/" style="font-weight: bold; font-size: 30px; color:#bb9205;" >Enter</a>
 			</div>
+			<br><br>
+			
+			<source src="{% static 'uploads/ghostride.wav' %}" type="audio/wav" id="ghost">
+			<source src="{% static 'uploads/page-9.wav' %}" type="audio/wav" id="page">
+			<source src="{% static 'uploads/thistimearoundfinal.wav' %}" type="audio/wav" id="thistime">
+
+			<div>
+				<div>
+				  <div class="row">
+					<div class="col-6">
+					  <audio id="audio1" controls="controls" controlsList="nodownload">
+						Your browser does not support the HTML5 Audio Tag.
+					  </audio>
+					</div>
+					<noscript>Your browser does not support JavaScript or JavaScript has been disabled. You will need to enable JavaScript for this page.</noscript>
+					<div class="col-6">
+					  <button id="btnPrev" class="ctrlbtn">|&lt;&lt; Prev Track</button> <button id="btnNext" class="ctrlbtn">Next Track &gt;&gt;|</button>
+					</div>
+				  </div>
+
+				  <header>
+					<div class="header">
+						<div id="plTrack"></div>
+					</div>
+				</header>
+
+				</div>
+			  </div>
+
+			<!--
+				<a class="btn btn-primary btn-xl js-scroll-trigger" href="https://www.google.com/">Get Free Beats</a>
+			-->
+			  
 		</div>
 	</section>
 {% endblock %}

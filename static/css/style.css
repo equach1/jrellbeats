@@ -344,13 +344,15 @@ a img.aligncenter {
 
 .main-banner{
 	height: 100%;
-	position: relative;
+    position: relative;
+    background-size: 30% 30%;
 }
 
 .main-banner{
 	display: table;
     width: 100%;
-	text-align: center;
+    text-align: center;
+    background-size: 30% 30%;
 }
 .main-banner::after {
     content: " ";
@@ -362,6 +364,7 @@ a img.aligncenter {
     background-color: #000;
     z-index: 0;
     opacity: 0%;
+    background-size: 30% 30%;
 }
 .heading{
 	color: #fff;
@@ -373,7 +376,8 @@ a img.aligncenter {
 .heading h1{
 	color: #151418;
 	font-weight: 700;
-	font-size: 62px;
+    font-size: 62px;
+    font-family: fantasy;
 	text-transform: uppercase;
 }
 .heading p{
